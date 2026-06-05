@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/1, Presentation/" />
+  <Folder Name="/src/2. Application/" />
+  <Folder Name="/src/3. Domain/">
+    <Project Path="src/OpenCommerce.Domain.Core/OpenCommerce.Domain.Core.csproj" Id="f5a7d0bf-c40f-495e-bc2e-cc1f1826255f" />
+    <Project Path="src/OpenCommerce.Domain/OpenCommerce.Domain.csproj" Id="485fabc7-f09f-46c7-9e29-918935524168" />
+  </Folder>
+  <Folder Name="/src/4. Infra/" />
+  <Folder Name="/tests/" />
+</Solution>
