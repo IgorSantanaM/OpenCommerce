@@ -3,6 +3,7 @@
     public abstract class Entity<TId> where TId : notnull
     {
         public TId? Id { get; protected set; }
+        private List<Event<TId>> _domainEvents = new List<Event<TId>>();
 
         public override bool Equals(object? obj)
         {
@@ -23,6 +24,20 @@
                 return false;
 
             return entityA.Equals(entityB);
+        }
+        public void AddDomainEvent(Event<TId> eventItem)
+        {
+            _domainEvents.Add(eventItem);
+        } 
+        
+        public void RemoveDomainEvent(Event<TId> eventItem)
+        {
+            _domainEvents.Remove(eventItem);
+        }
+
+        public void ClearDomainEvents()
+        {
+            _domainEvents.Clear();
         }
 
         public static bool operator !=(Entity<TId> entityA, Entity<TId> entityB)
